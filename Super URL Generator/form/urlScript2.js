@@ -110,6 +110,7 @@ var list=[];
 			url=replaceAll(url,'{{keyword}}',keywordString);
 			var asinString=arrayToString(asins,"|");
 			url=replaceAll(url,'{{asin}}', asinString);
+			brand=arrayToString(brand.split(' '),'+');
 			url=replaceAll(url,'{{brand}}', brand);
 			return url;
     }
