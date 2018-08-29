@@ -118,18 +118,15 @@ var asins = "";
         
     function getInput()
     {
-        urlinput= document.getElementById('element_1').value;
+       urlinput= document.getElementById('element_1').value;
        var asininput=document.getElementById('element_2').value;
        var keywordsinput=document.getElementById('element_3').value;
        urlSnippet1=document.getElementById("element_4").value;
        urlSnippet2=document.getElementById("element_5").value;
 
        asins=asininput.trim().split(" ");
-             
-        keywords=keywordsinput.trim().split("\n");
-             //console.log(keywords);
-        
-             
+       keywords=keywordsinput.trim().split("\n");
+       //console.log(keywords);
     }
     
 
@@ -143,19 +140,15 @@ var asins = "";
 
     function copyText(element)
     {
-            
-        /* Get the text field ??*/
+       /* Get the text field ??*/
       var copyText = element;
-
       /* Select the text field */
-        copyText.focus();
+      copyText.focus();
       copyText.select();
-
       /* Copy the text inside the text field */
       document.execCommand("Copy");
-
       /* Alert the copied text */
-        //copyText.flash();
+      //copyText.flash();
       //alert("Copied the text: " + copyText.value);
 
     }

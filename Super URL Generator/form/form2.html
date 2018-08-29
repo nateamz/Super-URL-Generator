@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="favicon.png" />
+<title>Super URL Generator</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+<script type="text/javascript" src="urlScript2.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!--<script src="jquery.js" type="text/javascript"></script>-->
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Super URL Generator</a></h1>
+		<form id="form_4502" class="appnitro"  method="post" action="">
+					<div class="form_description">
+			<h2>Super URL Generator</h2>
+			
+		</div>						
+			<ul >
+				<li id="li_1" >
+						<label class="description" for="element_1">URL Structure</label>
+						<div>
+							<input id="element_1" name="element_1" class="element text large" type="text" maxlength="255" value="https://www.amazon.{{com}}/s/ref=nb_sb_noss2?url=search-alias&field-keywords={{keyword}}&field-asin={{asin}}"/> 
+						</div> 
+				 </li><li id="li_5" >
+						<label class="description" for="element_5">Marketplace</label>
+						<div>
+							<select id="element_5" name="element_5" class="element select large">
+								<option value="US">US-amazon.com</option>
+								<option value="CA">CA-amazon.ca</option>
+								<option value="UK">UK-amazon.co.uk</option>
+							</select>
+						</div> 
+         </li><li id="li_3" >
+						<label class="description" for="element_3">Super Keywords<em>(use newline for new url)</em></label>
+						<div>
+							<textarea id="element_3" name="element_3" class="element textarea small"></textarea> 
+						</div> 
+         </li><li id="li_2" >
+						<label class="description" for="element_2">Product ASINs<em>(list all asins for all urls)</em></label>
+						<div>
+							<textarea id="element_2" name="element_2" class="element textarea small"></textarea> 
+						</div> 
+					</li>	<li id="li_4" >
+						<label class="description" for="element_4">Brand</label>
+						<div>
+							<input type="text" id="element_4" name="element_4" class="element text large"> 
+						</div> 
+         </li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="4502" />
+                   
+                    <button type="button" onclick="createSingleURL(); copyText(getElementById('resultURL'));">
+                            Single URL</button>
+                    <button type="button" onclick="createMultipleURL(); copyText(getElementById('resultURL'));">
+                        Generate List</button>
+		</li>
+			</ul>
+		</form>	
+		<div id="footer">
+            <h2 id="resultTag">Your results will show below.</h2>
+            <p>&lt;Root URL&gt;&lt;Substring1&gt;&lt;Keywords List&gt;&lt;Substring2&gt;&lt;Product ASINs&gt;</p>
+			<table id="resultTable" width="100%" >
+                <tr  id="result-0">
+                    <td>
+                        <label class="description" for="resultURL">1.</label>
+                            <button class="copy" type="button" onclick="copyText(this.parentElement.nextElementSibling.firstElementChild)">Copy</button>
+                    </td><td>
+                        <input id="resultURL" name="element_4" class="element textarea large" type="text"  value=""/>
+                    </td>
+                </tr>
+            </table>
+		</div>
+	</div>
+    
+	<img id="bottom" src="bottom.png" alt="">
+
+	</body>
+</html>
